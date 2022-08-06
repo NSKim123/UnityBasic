@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Downloads\\UnityEngineBasic_Sat2\\CSharp\\CSharpBasic\\statement_if\\statement_if.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\UnityBasic\\statement_if\\statement_if.csproj",
       "projectName": "statement_if",
-      "projectPath": "C:\\Users\\User\\Downloads\\UnityEngineBasic_Sat2\\CSharp\\CSharpBasic\\statement_if\\statement_if.csproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\UnityBasic\\statement_if\\statement_if.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Downloads\\UnityEngineBasic_Sat2\\CSharp\\CSharpBasic\\statement_if\\obj\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\UnityBasic\\statement_if\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

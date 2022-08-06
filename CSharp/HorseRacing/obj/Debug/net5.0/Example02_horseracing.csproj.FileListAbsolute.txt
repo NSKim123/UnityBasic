@@ -1,0 +1,16 @@
+C:\Users\User\Desktop\UnityBasic\HorseRacing\obj\Debug\net5.0\Example02_horseracing.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\UnityBasic\HorseRacing\obj\Debug\net5.0\Example02_horseracing.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\UnityBasic\HorseRacing\obj\Debug\net5.0\Example02_horseracing.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\UnityBasic\HorseRacing\obj\Debug\net5.0\Example02_horseracing.AssemblyInfo.cs
+C:\Users\User\Desktop\UnityBasic\HorseRacing\obj\Debug\net5.0\Example02_horseracing.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\UnityBasic\HorseRacing\bin\Debug\net5.0\Example02_horseracing.exe
+C:\Users\User\Desktop\UnityBasic\HorseRacing\bin\Debug\net5.0\Example02_horseracing.deps.json
+C:\Users\User\Desktop\UnityBasic\HorseRacing\bin\Debug\net5.0\Example02_horseracing.runtimeconfig.json
+C:\Users\User\Desktop\UnityBasic\HorseRacing\bin\Debug\net5.0\Example02_horseracing.runtimeconfig.dev.json
+C:\Users\User\Desktop\UnityBasic\HorseRacing\bin\Debug\net5.0\Example02_horseracing.dll
+C:\Users\User\Desktop\UnityBasic\HorseRacing\bin\Debug\net5.0\ref\Example02_horseracing.dll
+C:\Users\User\Desktop\UnityBasic\HorseRacing\bin\Debug\net5.0\Example02_horseracing.pdb
+C:\Users\User\Desktop\UnityBasic\HorseRacing\obj\Debug\net5.0\Example02_horseracing.dll
+C:\Users\User\Desktop\UnityBasic\HorseRacing\obj\Debug\net5.0\ref\Example02_horseracing.dll
+C:\Users\User\Desktop\UnityBasic\HorseRacing\obj\Debug\net5.0\Example02_horseracing.pdb
+C:\Users\User\Desktop\UnityBasic\HorseRacing\obj\Debug\net5.0\Example02_horseracing.genruntimeconfig.cache

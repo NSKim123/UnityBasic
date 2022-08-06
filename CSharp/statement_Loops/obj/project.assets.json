@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Downloads\\UnityEngineBasic_Sat2\\CSharp\\CSharpBasic\\statement_Loops\\statement_Loops.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\UnityBasic\\statement_Loops\\statement_Loops.csproj",
       "projectName": "statement_Loops",
-      "projectPath": "C:\\Users\\User\\Downloads\\UnityEngineBasic_Sat2\\CSharp\\CSharpBasic\\statement_Loops\\statement_Loops.csproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\UnityBasic\\statement_Loops\\statement_Loops.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Downloads\\UnityEngineBasic_Sat2\\CSharp\\CSharpBasic\\statement_Loops\\obj\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\UnityBasic\\statement_Loops\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

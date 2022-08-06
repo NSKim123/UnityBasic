@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Downloads\\UnityEngineBasic_Sat2\\CSharp\\CSharpBasic\\Array2DImension\\Array2DImension.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\UnityBasic\\Array2DImension\\Array2DImension.csproj",
       "projectName": "Array2DImension",
-      "projectPath": "C:\\Users\\User\\Downloads\\UnityEngineBasic_Sat2\\CSharp\\CSharpBasic\\Array2DImension\\Array2DImension.csproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\UnityBasic\\Array2DImension\\Array2DImension.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Downloads\\UnityEngineBasic_Sat2\\CSharp\\CSharpBasic\\Array2DImension\\obj\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\UnityBasic\\Array2DImension\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

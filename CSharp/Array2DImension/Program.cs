@@ -26,7 +26,7 @@ namespace Array2DImension
 
             while(true)
             {
-                Console.WriteLine($"플레이어 이동방향을 입력하세요 : Left/Right/Up/Down")
+                Console.WriteLine($"플레이어 이동방향을 입력하세요 : Left/Right/Up/Down");
                 string input = Console.ReadLine();
                 if (input.Equals("Left"))
                 {
