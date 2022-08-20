@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\UnityBasic\\HorseRacing\\Example02_horseracing.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\UnityBasic\\CSharp\\HorseRacing\\Example02_horseracing.csproj",
       "projectName": "Example02_horseracing",
-      "projectPath": "C:\\Users\\User\\Desktop\\UnityBasic\\HorseRacing\\Example02_horseracing.csproj",
+      "projectPath": "C:\\Users\\User\\Documents\\GitHub\\UnityBasic\\CSharp\\HorseRacing\\Example02_horseracing.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\UnityBasic\\HorseRacing\\obj\\",
+      "outputPath": "C:\\Users\\User\\Documents\\GitHub\\UnityBasic\\CSharp\\HorseRacing\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

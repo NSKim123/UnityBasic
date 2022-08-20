@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\UnityBasic\\Methods\\Methods.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\UnityBasic\\CSharp\\Methods\\Methods.csproj",
       "projectName": "Methods",
-      "projectPath": "C:\\Users\\User\\Desktop\\UnityBasic\\Methods\\Methods.csproj",
+      "projectPath": "C:\\Users\\User\\Documents\\GitHub\\UnityBasic\\CSharp\\Methods\\Methods.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\UnityBasic\\Methods\\obj\\",
+      "outputPath": "C:\\Users\\User\\Documents\\GitHub\\UnityBasic\\CSharp\\Methods\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

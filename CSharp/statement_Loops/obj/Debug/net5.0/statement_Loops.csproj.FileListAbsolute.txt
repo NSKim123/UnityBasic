@@ -1,0 +1,5 @@
+C:\Users\User\Documents\GitHub\UnityBasic\CSharp\statement_Loops\obj\Debug\net5.0\statement_Loops.csproj.AssemblyReference.cache
+C:\Users\User\Documents\GitHub\UnityBasic\CSharp\statement_Loops\obj\Debug\net5.0\statement_Loops.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\GitHub\UnityBasic\CSharp\statement_Loops\obj\Debug\net5.0\statement_Loops.AssemblyInfoInputs.cache
+C:\Users\User\Documents\GitHub\UnityBasic\CSharp\statement_Loops\obj\Debug\net5.0\statement_Loops.AssemblyInfo.cs
+C:\Users\User\Documents\GitHub\UnityBasic\CSharp\statement_Loops\obj\Debug\net5.0\statement_Loops.csproj.CoreCompileInputs.cache

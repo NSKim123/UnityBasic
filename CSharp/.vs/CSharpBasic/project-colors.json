@@ -25,7 +25,62 @@
       "ProjectGuid": "dee1df6e-b51f-47f7-bfd1-224974f0c5f9",
       "DisplayName": "ClassUsageBasic",
       "ColorIndex": 3
+    },
+    "b1655cbc-5bd6-44d7-bc8b-7faf8949e32e": {
+      "ProjectGuid": "b1655cbc-5bd6-44d7-bc8b-7faf8949e32e",
+      "DisplayName": "ClassInheritanceAndPolymophism",
+      "ColorIndex": 4
+    },
+    "eb3e309e-7ce9-40fe-a870-78ecd286c93a": {
+      "ProjectGuid": "eb3e309e-7ce9-40fe-a870-78ecd286c93a",
+      "DisplayName": "statement_Loops",
+      "ColorIndex": 5
+    },
+    "6bd22bcd-7db6-4b8b-8506-14c7e00029ac": {
+      "ProjectGuid": "6bd22bcd-7db6-4b8b-8506-14c7e00029ac",
+      "DisplayName": "Example1",
+      "ColorIndex": 6
+    },
+    "6e75645c-4ecf-409b-b418-5ac38e4eb8be": {
+      "ProjectGuid": "6e75645c-4ecf-409b-b418-5ac38e4eb8be",
+      "DisplayName": "Example02_horseracing",
+      "ColorIndex": 7
+    },
+    "7d969c4c-3453-4b9f-b3fc-0c4c3bce0278": {
+      "ProjectGuid": "7d969c4c-3453-4b9f-b3fc-0c4c3bce0278",
+      "DisplayName": "Structure",
+      "ColorIndex": 8
+    },
+    "1fd17015-371d-4098-8504-a3fbfd4b5c92": {
+      "ProjectGuid": "1fd17015-371d-4098-8504-a3fbfd4b5c92",
+      "DisplayName": "Statement_SwitchCase",
+      "ColorIndex": 9
+    },
+    "e47e1478-013b-4ac3-a7a7-f603c40c4db9": {
+      "ProjectGuid": "e47e1478-013b-4ac3-a7a7-f603c40c4db9",
+      "DisplayName": "Array2DImension",
+      "ColorIndex": 10
+    },
+    "07e884a4-71f8-4510-b6e3-54e2df580939": {
+      "ProjectGuid": "07e884a4-71f8-4510-b6e3-54e2df580939",
+      "DisplayName": "Array",
+      "ColorIndex": 11
+    },
+    "bcaa66cc-d804-46b4-858e-745817f3f04c": {
+      "ProjectGuid": "bcaa66cc-d804-46b4-858e-745817f3f04c",
+      "DisplayName": "operators",
+      "ColorIndex": 12
+    },
+    "d8a96427-6fa9-4c88-b7ce-dec4f2ace483": {
+      "ProjectGuid": "d8a96427-6fa9-4c88-b7ce-dec4f2ace483",
+      "DisplayName": "statement_if",
+      "ColorIndex": 13
+    },
+    "5ded92fd-087d-4caf-9a94-1098321a3514": {
+      "ProjectGuid": "5ded92fd-087d-4caf-9a94-1098321a3514",
+      "DisplayName": "Delegate",
+      "ColorIndex": 14
     }
   },
-  "NextColorIndex": 4
+  "NextColorIndex": 15
 }

@@ -1,0 +1,5 @@
+C:\Users\User\Documents\GitHub\UnityBasic\CSharp\operators\obj\Debug\net5.0\operators.csproj.AssemblyReference.cache
+C:\Users\User\Documents\GitHub\UnityBasic\CSharp\operators\obj\Debug\net5.0\operators.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\GitHub\UnityBasic\CSharp\operators\obj\Debug\net5.0\operators.AssemblyInfoInputs.cache
+C:\Users\User\Documents\GitHub\UnityBasic\CSharp\operators\obj\Debug\net5.0\operators.AssemblyInfo.cs
+C:\Users\User\Documents\GitHub\UnityBasic\CSharp\operators\obj\Debug\net5.0\operators.csproj.CoreCompileInputs.cache

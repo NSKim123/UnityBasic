@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\UnityBasic\\ClassInheritanceAndPolymophism\\ClassInheritanceAndPolymophism.csproj": {}
+    "C:\\Users\\User\\Documents\\GitHub\\UnityBasic\\CSharp\\ClassInheritanceAndPolymophism\\ClassInheritanceAndPolymophism.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\UnityBasic\\ClassInheritanceAndPolymophism\\ClassInheritanceAndPolymophism.csproj": {
+    "C:\\Users\\User\\Documents\\GitHub\\UnityBasic\\CSharp\\ClassInheritanceAndPolymophism\\ClassInheritanceAndPolymophism.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\UnityBasic\\ClassInheritanceAndPolymophism\\ClassInheritanceAndPolymophism.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\UnityBasic\\CSharp\\ClassInheritanceAndPolymophism\\ClassInheritanceAndPolymophism.csproj",
         "projectName": "ClassInheritanceAndPolymophism",
-        "projectPath": "C:\\Users\\User\\Desktop\\UnityBasic\\ClassInheritanceAndPolymophism\\ClassInheritanceAndPolymophism.csproj",
+        "projectPath": "C:\\Users\\User\\Documents\\GitHub\\UnityBasic\\CSharp\\ClassInheritanceAndPolymophism\\ClassInheritanceAndPolymophism.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\UnityBasic\\ClassInheritanceAndPolymophism\\obj\\",
+        "outputPath": "C:\\Users\\User\\Documents\\GitHub\\UnityBasic\\CSharp\\ClassInheritanceAndPolymophism\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

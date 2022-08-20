@@ -1,0 +1,16 @@
+C:\Users\User\Documents\GitHub\UnityBasic\CSharp\Example1\bin\Debug\net5.0\Example1.exe
+C:\Users\User\Documents\GitHub\UnityBasic\CSharp\Example1\bin\Debug\net5.0\Example1.deps.json
+C:\Users\User\Documents\GitHub\UnityBasic\CSharp\Example1\bin\Debug\net5.0\Example1.runtimeconfig.json
+C:\Users\User\Documents\GitHub\UnityBasic\CSharp\Example1\bin\Debug\net5.0\Example1.runtimeconfig.dev.json
+C:\Users\User\Documents\GitHub\UnityBasic\CSharp\Example1\bin\Debug\net5.0\Example1.dll
+C:\Users\User\Documents\GitHub\UnityBasic\CSharp\Example1\bin\Debug\net5.0\ref\Example1.dll
+C:\Users\User\Documents\GitHub\UnityBasic\CSharp\Example1\bin\Debug\net5.0\Example1.pdb
+C:\Users\User\Documents\GitHub\UnityBasic\CSharp\Example1\obj\Debug\net5.0\Example1.csproj.AssemblyReference.cache
+C:\Users\User\Documents\GitHub\UnityBasic\CSharp\Example1\obj\Debug\net5.0\Example1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\GitHub\UnityBasic\CSharp\Example1\obj\Debug\net5.0\Example1.AssemblyInfoInputs.cache
+C:\Users\User\Documents\GitHub\UnityBasic\CSharp\Example1\obj\Debug\net5.0\Example1.AssemblyInfo.cs
+C:\Users\User\Documents\GitHub\UnityBasic\CSharp\Example1\obj\Debug\net5.0\Example1.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\GitHub\UnityBasic\CSharp\Example1\obj\Debug\net5.0\Example1.dll
+C:\Users\User\Documents\GitHub\UnityBasic\CSharp\Example1\obj\Debug\net5.0\ref\Example1.dll
+C:\Users\User\Documents\GitHub\UnityBasic\CSharp\Example1\obj\Debug\net5.0\Example1.pdb
+C:\Users\User\Documents\GitHub\UnityBasic\CSharp\Example1\obj\Debug\net5.0\Example1.genruntimeconfig.cache

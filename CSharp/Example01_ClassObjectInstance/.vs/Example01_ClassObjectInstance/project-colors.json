@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "caa50ad7-7504-4a2c-9513-79909c195749": {
+      "ProjectGuid": "caa50ad7-7504-4a2c-9513-79909c195749",
+      "DisplayName": "Example01_ClassObjectInstance",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

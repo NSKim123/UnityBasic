@@ -1,0 +1,5 @@
+C:\Users\User\Documents\GitHub\UnityBasic\CSharp\ClassInheritanceAndPolymophism\obj\Debug\net5.0\ClassInheritanceAndPolymophism.csproj.AssemblyReference.cache
+C:\Users\User\Documents\GitHub\UnityBasic\CSharp\ClassInheritanceAndPolymophism\obj\Debug\net5.0\ClassInheritanceAndPolymophism.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\GitHub\UnityBasic\CSharp\ClassInheritanceAndPolymophism\obj\Debug\net5.0\ClassInheritanceAndPolymophism.AssemblyInfoInputs.cache
+C:\Users\User\Documents\GitHub\UnityBasic\CSharp\ClassInheritanceAndPolymophism\obj\Debug\net5.0\ClassInheritanceAndPolymophism.AssemblyInfo.cs
+C:\Users\User\Documents\GitHub\UnityBasic\CSharp\ClassInheritanceAndPolymophism\obj\Debug\net5.0\ClassInheritanceAndPolymophism.csproj.CoreCompileInputs.cache

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\UnityBasic\\FirstProject\\FirstProject.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\UnityBasic\\CSharp\\FirstProject\\FirstProject.csproj",
       "projectName": "FirstProject",
-      "projectPath": "C:\\Users\\User\\Desktop\\UnityBasic\\FirstProject\\FirstProject.csproj",
+      "projectPath": "C:\\Users\\User\\Documents\\GitHub\\UnityBasic\\CSharp\\FirstProject\\FirstProject.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\UnityBasic\\FirstProject\\obj\\",
+      "outputPath": "C:\\Users\\User\\Documents\\GitHub\\UnityBasic\\CSharp\\FirstProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
