@@ -38,6 +38,11 @@ public class GameManager : MonoBehaviour
             case GameStates.Idle:
                 break;
             case GameStates.StartPlay:
+                if (NoteManager.instance.IsReady)
+                { 
+                    NoteManager.instance.StartSpawn();
+                    State++;
+                }
                 break;
             case GameStates.WaitForGameFinished:
                 break;
