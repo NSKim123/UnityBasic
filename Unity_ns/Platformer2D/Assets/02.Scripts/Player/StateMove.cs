@@ -1,4 +1,6 @@
-﻿public class StateMove : StateBase
+﻿using System.Data;
+
+public class StateMove : StateBase
 {
     private GroundDetector _groundDetector;
     public StateMove(StateMachine.StateType machineType, StateMachine machine) : base(machineType, machine)
@@ -6,11 +8,13 @@
         _groundDetector = machine.GetComponent<GroundDetector>();
     }
 
-    public override bool IsExecuteOK { get; }
+    public override bool IsExecuteOK => true;
 
     public override void Execute()
     {
-        
+        Current = IState.Commands.Prepare;
+        Machine.IsDirectionChangable = true;
+        Machine.IsMovable = true;
     }
 
     public override void FixedUpdate()
@@ -20,16 +24,35 @@
 
     public override void ForceStop()
     {
-        
-    }
-
-    public override void MoveNext()
-    {
-       
+        Current = IState.Commands.Idle;
     }
 
     public override StateMachine.StateType Update()
     {
+        StateMachine.StateType next = MachineType;
+        switch (Current)
+        {
+            case IState.Commands.Idle:
+                break;
+            case IState.Commands.Prepare:
+                {
+                    AnimationManager.Play("Move");
+                    MoveNext();
+                }
+                break;
+            case IState.Commands.Casting:
+                {
+                    MoveNext();
+                }
+                break;
+            case IState.Commands.OnAction:
+                break;
+            case IState.Commands.Finish:
+                break;
+            default:
+                break;
+        }
+
         return MachineType;
     }
 }

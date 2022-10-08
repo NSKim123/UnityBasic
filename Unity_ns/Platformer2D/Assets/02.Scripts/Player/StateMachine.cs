@@ -19,9 +19,45 @@ public class StateMachine : MonoBehaviour
     public StateType Current;
     private Dictionary<StateType, StateBase> _states = new Dictionary<StateType, StateBase>();
     private StateBase _currentState;
+    private CharacterBase _character;
+
+    private float _h => Input.GetAxis("Horizontal");
+    private float _v => Input.GetAxis("Vertical");
+    private Vector2 _move;
+    public bool IsMovable { get; set; }
+    public bool IsDirectionChangable { get; set; }
+    //-1 : left, 1 : right
+    private int _direction;
+    public int Direction
+    {
+        get 
+        {
+            return _direction; 
+        }
+        set
+        {
+            if(value<0)
+            {
+                _direction = -1;
+                transform.eulerAngles = new Vector3(0.0f, 180.0f, 0.0f);
+            }
+            else
+            {
+                _direction = 1;
+                transform.eulerAngles = Vector3.zero;
+            }
+        }
+    }
+    [SerializeField] private int _directionInit;
+
+    public void StopMove()
+    {
+        _move.x = 0.0f;
+    }
 
     private void Awake()
     {
+        _character= GetComponent<CharacterBase>();
         Init();
     }
     private void Init()
@@ -32,6 +68,9 @@ public class StateMachine : MonoBehaviour
         }
         _currentState = _states[StateType.Idle];
         Current = StateType.Idle;
+
+        IsDirectionChangable = true;
+        IsMovable = true;
     }
 
     private void AddState(StateType stateType)
@@ -69,26 +108,57 @@ public class StateMachine : MonoBehaviour
     }
     private void Update()
     {
-        ChangeState(_currentState.Update());
+        bool IsStateChanged = false;
+        if(IsDirectionChangable)
+        {
+            if(_h<0.0f)
+                Direction = Constants.DIRECTION_LEFT;
+            else if(_h>0.0f)
+                Direction = Constants.DIRECTION_RIGHT;
+        }
 
-        if (Input.GetKeyDown(KeyCode.LeftAlt))
-            ChangeState(StateType.Jump);
-        
+        if (IsMovable)
+        {
+            _move.x = _h;
+
+            if (Mathf.Abs(_move.x) > 0.0f)
+                IsStateChanged = ChangeState(StateType.Move);
+            else
+                IsStateChanged = ChangeState(StateType.Idle);
+        }
+
+        IsStateChanged = ChangeState(_currentState.Update());
+
+        if (IsStateChanged == false)
+        {
+            if (Input.GetKey(KeyCode.LeftAlt))
+                IsStateChanged = ChangeState(StateType.Jump);
+            else if (Input.GetKeyDown(KeyCode.DownArrow))
+                IsStateChanged = ChangeState(StateType.Crouch);
+            else if (Input.GetKeyDown(KeyCode.A))
+                IsStateChanged = ChangeState(StateType.Attack);
+        }
     }
 
-    private void ChangeState(StateType newStateType)
+    private void FixedUpdate()
+    {
+        _currentState.FixedUpdate();
+        transform.position += new Vector3(_move.x * _character.MoveSpeed, _move.y, 0.0f) * Time.fixedDeltaTime;
+    }
+    private bool ChangeState(StateType newStateType)
     {
         //상태가 바꾸지 않았으면
         if (Current == newStateType)
-            return;
+            return false;
         //바꾸려는 상태가 실행가능하지 않으면
         if (_states[newStateType].IsExecuteOK == false)
-            return;
+            return false ;
 
         
         _currentState.ForceStop(); // 기존상태 중단
         _currentState = _states[newStateType]; //상태 갱신
         _currentState.Execute(); // 갱신된 상태 실행
         Current = newStateType;
+        return true;
     }
 }

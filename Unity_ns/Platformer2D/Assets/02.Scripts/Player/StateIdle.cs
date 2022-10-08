@@ -11,6 +11,8 @@
     public override void Execute()
     {
         Current = IState.Commands.Prepare;
+        Machine.IsDirectionChangable = true;
+        Machine.IsMovable = true;
     }
 
     public override void FixedUpdate()
@@ -38,7 +40,7 @@
                 break;
             case IState.Commands.Prepare:
                 {
-                    Animator.Play("Idle");
+                    AnimationManager.Play("Idle");
                     MoveNext();
                 }
                     break;
