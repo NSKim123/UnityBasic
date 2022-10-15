@@ -14,6 +14,9 @@ public class StateMachine : MonoBehaviour
         Fall,
         Attack,
         Crouch,
+        EdgeGrab,
+        LadderUp,
+        LadderDown,
         EOF
     }
     public StateType Current;
@@ -50,9 +53,21 @@ public class StateMachine : MonoBehaviour
     }
     [SerializeField] private int _directionInit;
 
+    public void ForceChangeState(StateType newStateType)
+    {
+        _currentState.ForceStop(); // 기존상태 중단
+        _currentState = _states[newStateType]; //상태 갱신
+        _currentState.Execute(); // 갱신된 상태 실행
+        Current = newStateType;
+    }
     public void StopMove()
     {
         _move.x = 0.0f;
+    }
+
+    public void SetMove(Vector2 move)
+    {
+        _move = move;
     }
 
     private void Awake()
@@ -137,6 +152,8 @@ public class StateMachine : MonoBehaviour
                 IsStateChanged = ChangeState(StateType.Crouch);
             else if (Input.GetKeyDown(KeyCode.A))
                 IsStateChanged = ChangeState(StateType.Attack);
+            else if (Input.GetKey(KeyCode.UpArrow))
+                IsStateChanged = ChangeState(StateType.EdgeGrab);
         }
     }
 

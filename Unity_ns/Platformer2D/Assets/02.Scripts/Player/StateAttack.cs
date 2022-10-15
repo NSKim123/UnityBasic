@@ -12,9 +12,9 @@ public class StateAttack : StateBase
     }
 
     public override bool IsExecuteOK => Machine.Current == StateMachine.StateType.Idle ||
-                                                                Machine.Current == StateMachine.StateType.Move ||
-                                                                Machine.Current == StateMachine.StateType.Jump ||
-                                                                Machine.Current == StateMachine.StateType.Fall;
+                                        Machine.Current == StateMachine.StateType.Move ||
+                                        Machine.Current == StateMachine.StateType.Jump ||
+                                        Machine.Current == StateMachine.StateType.Fall;
 
     public override void Execute()
     {
@@ -59,7 +59,7 @@ public class StateAttack : StateBase
                         
                         if(hits.collider != null)
                         {
-                            hits.collider.GetComponent<Enemy>().Hp -= Character.ATK;
+                            hits.collider.GetComponent<Enemy>().Hurt(Character.ATK);
                             hits.collider.GetComponent<EnemyController>().KnockBack(Machine.Direction);
                         }
 
@@ -71,7 +71,7 @@ public class StateAttack : StateBase
                 {
                     if (AnimationManager.GetNormalizedTime() >= 1.0f)
                     {
-                        base.MoveNext();
+                        MoveNext();
                     }
                 }
                 break;
