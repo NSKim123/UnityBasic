@@ -17,12 +17,16 @@ public class StateMachine : MonoBehaviour
         EdgeGrab,
         LadderUp,
         LadderDown,
+        Hurt,
+        Die,
         EOF
     }
     public StateType Current;
     private Dictionary<StateType, StateBase> _states = new Dictionary<StateType, StateBase>();
     private StateBase _currentState;
+    private bool _isStateChanged;
     private CharacterBase _character;
+    private Rigidbody _rb;
 
     private float _h => Input.GetAxis("Horizontal");
     private float _v => Input.GetAxis("Vertical");
@@ -69,10 +73,11 @@ public class StateMachine : MonoBehaviour
     {
         _move = move;
     }
-
+    
     private void Awake()
     {
         _character= GetComponent<CharacterBase>();
+        _rb=GetComponent<Rigidbody>();
         Init();
     }
     private void Init()
@@ -86,6 +91,20 @@ public class StateMachine : MonoBehaviour
 
         IsDirectionChangable = true;
         IsMovable = true;
+
+        RegisterShortCuts();
+    }
+
+    private void RegisterShortCuts()
+    {
+        InputHandler.RegisterKeyDownAction(KeyCode.DownArrow, () => ChangeState(StateType.LadderDown));
+        InputHandler.RegisterKeyDownAction(KeyCode.UpArrow, () => ChangeState(StateType.LadderUp));
+
+        InputHandler.RegisterKeyPressedAction(KeyCode.LeftAlt, () => ChangeState(StateType.Jump));        
+        InputHandler.RegisterKeyPressedAction(KeyCode.DownArrow, () => ChangeState(StateType.Crouch));
+        InputHandler.RegisterKeyPressedAction(KeyCode.A, () => ChangeState(StateType.Attack));
+        InputHandler.RegisterKeyPressedAction(KeyCode.UpArrow, () => ChangeState(StateType.EdgeGrab));
+
     }
 
     private void AddState(StateType stateType)
@@ -123,8 +142,8 @@ public class StateMachine : MonoBehaviour
     }
     private void Update()
     {
-        bool IsStateChanged = false;
-        if(IsDirectionChangable)
+        _isStateChanged = false;
+        if (IsDirectionChangable)
         {
             if(_h<0.0f)
                 Direction = Constants.DIRECTION_LEFT;
@@ -137,24 +156,11 @@ public class StateMachine : MonoBehaviour
             _move.x = _h;
 
             if (Mathf.Abs(_move.x) > 0.0f)
-                IsStateChanged = ChangeState(StateType.Move);
+                ChangeState(StateType.Move);
             else
-                IsStateChanged = ChangeState(StateType.Idle);
-        }
-
-        IsStateChanged = ChangeState(_currentState.Update());
-
-        if (IsStateChanged == false)
-        {
-            if (Input.GetKey(KeyCode.LeftAlt))
-                IsStateChanged = ChangeState(StateType.Jump);
-            else if (Input.GetKeyDown(KeyCode.DownArrow))
-                IsStateChanged = ChangeState(StateType.Crouch);
-            else if (Input.GetKeyDown(KeyCode.A))
-                IsStateChanged = ChangeState(StateType.Attack);
-            else if (Input.GetKey(KeyCode.UpArrow))
-                IsStateChanged = ChangeState(StateType.EdgeGrab);
-        }
+                ChangeState(StateType.Idle);
+        }          
+        ChangeState(_currentState.Update());
     }
 
     private void FixedUpdate()
@@ -162,8 +168,11 @@ public class StateMachine : MonoBehaviour
         _currentState.FixedUpdate();
         transform.position += new Vector3(_move.x * _character.MoveSpeed, _move.y, 0.0f) * Time.fixedDeltaTime;
     }
-    private bool ChangeState(StateType newStateType)
+    public bool ChangeState(StateType newStateType)
     {
+        //이미 상태가 해당 프레임에서 한번 바뀌었다면
+        if (_isStateChanged)
+            return false;
         //상태가 바꾸지 않았으면
         if (Current == newStateType)
             return false;
@@ -176,6 +185,7 @@ public class StateMachine : MonoBehaviour
         _currentState = _states[newStateType]; //상태 갱신
         _currentState.Execute(); // 갱신된 상태 실행
         Current = newStateType;
+        _isStateChanged = true;
         return true;
     }
 }

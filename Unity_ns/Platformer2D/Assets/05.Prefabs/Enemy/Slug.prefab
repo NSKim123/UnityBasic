@@ -150,7 +150,7 @@ MonoBehaviour:
   _aiTimer: 0
   _aiThinkTimeMin: 0.1
   _aiThinkTimeMax: 3
-  _aiAutoFollow: 0
+  _aiAutoFollow: 1
   _aiAttackable: 0
   _aiDetectRange: 2
   _aiAttackRange: 0.5
@@ -159,7 +159,7 @@ MonoBehaviour:
     m_Bits: 1024
   _isMovable: 1
   _isDirectionChangable: 1
-  _moveSpeed: 1
+  _moveSpeed: 0.5
   _move: {x: 0, y: 0}
   _directioninit: -1
   _knockbackForce: {x: 1, y: 1}

@@ -30,7 +30,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - PopUp
   - 
   - 
   - 
@@ -55,4 +55,7 @@ TagManager:
     locked: 0
   - name: Enemy
     uniqueID: 3291796221
+    locked: 0
+  - name: DamagePopUp
+    uniqueID: 3736519527
     locked: 0
