@@ -16,7 +16,7 @@ public class CameraHandler : MonoBehaviour
     private float _boundShapeYMin;
     private float _boundShapeYMax;
 
-    [SerializeField] private Transform _target;
+    private Transform _target;
 
     private void Awake()
     {
@@ -28,6 +28,10 @@ public class CameraHandler : MonoBehaviour
         _boundShapeYMin = _boundShape.transform.position.y + _boundShape.offset.y - _boundShape.size.y / 2.0f;
         _boundShapeYMax = _boundShape.transform.position.y + _boundShape.offset.y + _boundShape.size.y / 2.0f;
 
+    }
+    private void Start()
+    {
+        _target =  Player.Instance.transform;
     }
     private void LateUpdate()
     {
