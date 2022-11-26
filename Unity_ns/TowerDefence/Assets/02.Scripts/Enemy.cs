@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 public class Enemy : MonoBehaviour
 {
     private float _hp;
@@ -26,6 +27,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float _hpMax;
     [SerializeField] private Slider _hpSlider;
 
+    public event Action OnDie;
     private float _speed;
     public float Speed
     {
@@ -44,7 +46,7 @@ public class Enemy : MonoBehaviour
 
     public void Die()
     {
-        Destroy(gameObject);
+        OnDie?.Invoke();
     }
 
     private void Awake()
