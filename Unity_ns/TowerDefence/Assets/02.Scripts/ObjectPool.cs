@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.Runtime.CompilerServices;
+
 public class ObjectPool : MonoBehaviour
 {
     private static ObjectPool _instance;
@@ -9,9 +11,9 @@ public class ObjectPool : MonoBehaviour
     {
         get
         {
-            if(_instance == null)
+            if (_instance == null)
             {
-                _instance = Instantiate(Resources.Load<ObjectPool>("ObjectPool"));                
+                _instance = Instantiate(Resources.Load<ObjectPool>("ObjectPool"));
             }
             return _instance;
         }
@@ -32,10 +34,10 @@ public class ObjectPool : MonoBehaviour
 
     public void InstantiateAllElement()
     {
-        foreach(ObjectPoolElement element in _elements)
+        foreach (ObjectPoolElement element in _elements)
         {
             //대기열 생성
-            if(_spawnQueueDictionary.ContainsKey(element.Name) == false)
+            if (_spawnQueueDictionary.ContainsKey(element.Name) == false)
                 _spawnQueueDictionary.Add(element.Name, new Queue<GameObject>());
 
             for (int i = 0; i < element.Num; i++)
@@ -43,7 +45,7 @@ public class ObjectPool : MonoBehaviour
                 InstantiateElement(element);
             }
         }
-        
+
     }
 
     /// <summary>
@@ -56,11 +58,11 @@ public class ObjectPool : MonoBehaviour
     {
         if (_spawnQueueDictionary.ContainsKey(name) == false)
             return null;
-        if(_spawnQueueDictionary[name].Count <= 0)
+        if (_spawnQueueDictionary[name].Count <= 0)
         {
             ObjectPoolElement element = _elements.Find(e => e.Name == name);
-            
-            for(int i = 0; i < Math.Ceiling(Math.Log10(element.Num));i++)
+
+            for (int i = 0; i < Math.Ceiling(Math.Log10(element.Num)); i++)
             {
                 InstantiateElement(element);
             } //지역성            
@@ -75,13 +77,36 @@ public class ObjectPool : MonoBehaviour
 
         return go;
     }
+    public GameObject Spawn(string name, Vector3 spawnPos, Quaternion quaternion)
+    {
+        if (_spawnQueueDictionary.ContainsKey(name) == false)
+            return null;
+        if (_spawnQueueDictionary[name].Count <= 0)
+        {
+            ObjectPoolElement element = _elements.Find(e => e.Name == name);
+
+            for (int i = 0; i < Math.Ceiling(Math.Log10(element.Num)); i++)
+            {
+                InstantiateElement(element);
+            } //지역성            
+        }
+
+
+        GameObject go = _spawnQueueDictionary[name].Dequeue();
+        go.transform.SetParent(null);
+        go.transform.position = spawnPos;
+        go.transform.rotation = quaternion;
+        go.SetActive(true);
+
+        return go;
+    }
     /// <summary>
     /// 빌려간 것을 반납할때 호출하는 함수
     /// </summary>
     /// <param name="go"></param>
     public void Return(GameObject go)
     {
-        if(_spawnQueueDictionary.ContainsKey(go.name)==false)
+        if (_spawnQueueDictionary.ContainsKey(go.name) == false)
         {
             Debug.LogError($"[ObjectPool] : {go.name} 는 왜 가져왔니? 난 빌려준적 없는데...");
             return;
@@ -91,6 +116,11 @@ public class ObjectPool : MonoBehaviour
         go.transform.localPosition = Vector3.zero;
         _spawnQueueDictionary[go.name].Enqueue(go);
         go.SetActive(false);
+    }
+
+    public void Return(GameObject go, float delay)
+    {
+        StartCoroutine(E_Return(go, delay));
     }
 
     //===================================================================================
@@ -118,8 +148,17 @@ public class ObjectPool : MonoBehaviour
         }
         go.transform.SetAsLastSibling();
     }
-}
 
+
+    private IEnumerator E_Return(GameObject go, float delay)
+    {
+
+        yield return new WaitForSeconds(delay);
+        Return(go);
+    }
+    
+}
+[Serializable]
 public struct ObjectPoolElement
 {
     public string Name;
