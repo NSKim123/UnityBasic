@@ -42,6 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3874243014368549606}
   - component: {fileID: 8063557196454066648}
+  - component: {fileID: 4230912686985766592}
   m_Layer: 10
   m_Name: MachineGun1
   m_TagString: Untagged
@@ -57,7 +58,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4506239324097320368}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.009, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -79,6 +80,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Info: {fileID: 11400000, guid: 28ccd11913145374fad2a71ec4b8560c, type: 2}
+  Node: {fileID: 0}
   _rotatePoint: {fileID: 1761473425203998976}
   _detectRange: 1
   TargetLayer:
@@ -89,6 +91,19 @@ MonoBehaviour:
   _firePointsBlinkTime: 0.1
   _damage: 10
   _reloadTime: 1
+--- !u!65 &4230912686985766592
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4506239324097320368}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.294513, y: 1.4744995, z: 1.3889256}
+  m_Center: {x: 0.14725685, y: 0.6744094, z: -0.06287095}
 --- !u!1 &4849853782570628877
 GameObject:
   m_ObjectHideFlags: 0

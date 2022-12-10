@@ -66,8 +66,8 @@ public class EnemyMove : MonoBehaviour
     }
 
     private void OnReachedToEnd()
-    {
-        // todo -> decrease play life 1
+    {        
+        Player.Instance.Life -= 1;
         _enemy.Die();
     }
 }

@@ -42,6 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3874243014368549606}
   - component: {fileID: 8063557196454066648}
+  - component: {fileID: -551057615928036806}
   m_Layer: 10
   m_Name: MachineGun2
   m_TagString: Untagged
@@ -79,6 +80,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Info: {fileID: 11400000, guid: 9587750b45d7da743b0bf12934084644, type: 2}
+  Node: {fileID: 0}
   _rotatePoint: {fileID: 7093157297366741164}
   _detectRange: 2
   TargetLayer:
@@ -89,6 +91,19 @@ MonoBehaviour:
   _firePointsBlinkTime: 0.1
   _damage: 20
   _reloadTime: 1
+--- !u!65 &-551057615928036806
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4506239324097320368}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6621547, y: 1.7932348, z: 1.8852798}
+  m_Center: {x: -0.056273222, y: 0.89220524, z: 0.08043474}
 --- !u!1 &4849853782570628877
 GameObject:
   m_ObjectHideFlags: 0
